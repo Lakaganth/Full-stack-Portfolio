@@ -1,0 +1,60 @@
+.parallax-effect-glare-scale {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 80vw;
+  min-height: 60vh;
+  background-image: url("../../assets/svg/laptop_logo.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform-style: preserve-3d;
+
+  .inner-element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-style: italic;
+    color: white;
+    transform: translateZ(60px);
+  }
+}
+
+.parallax-container {
+  display: flex;
+  justify-content: center;
+  // margin: 30vh;
+  font-family: Arial, sans-serif;
+}
+
+.laka-face {
+  min-width: 25vw;
+  min-height: 25vh;
+  position: absolute;
+  top: -200px;
+  left: -45px;
+
+  background-image: url("../../assets/svg/lakaface.svg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  z-index: 5;
+}
+
+.heading-title {
+  position: absolute;
+  bottom: 10vh;
+  left: 25vw;
+}
