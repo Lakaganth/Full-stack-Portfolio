@@ -4,13 +4,21 @@ import { animated } from "react-spring";
 
 import "./HeaderNav.scss";
 
-const NavDropdown = ({ style }) => {
+const NavDropdown = ({ style, navOpen }) => {
   return (
     <animated.div className="nav-wrapper" style={style}>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/projects">Projects</NavLink>
-      <NavLink to="/about">About</NavLink>
-      <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/" onClick={() => navOpen(false)}>
+        Home
+      </NavLink>
+      <NavLink to="/projects" onClick={() => navOpen(false)}>
+        Projects
+      </NavLink>
+      <NavLink to="/about" onClick={() => navOpen(false)}>
+        About
+      </NavLink>
+      <NavLink to="/contact" onClick={() => navOpen(false)}>
+        Contact
+      </NavLink>
     </animated.div>
   );
 };

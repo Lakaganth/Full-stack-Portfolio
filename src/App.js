@@ -1,10 +1,11 @@
 import React from "react";
 
 import "./App.css";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import HeaderNav from "./components/header/HeaderNav";
-import LogoParallax from "./components/logoParallax/LogoMobileParallax";
+
+import LandingPage from "./Pages/landingPage/LandingPage";
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <div className="App">
         <HeaderNav></HeaderNav>
         <Switch>
-          <LogoParallax></LogoParallax>
+          <Route path="/" exact component={LandingPage}></Route>
         </Switch>
       </div>
     </Router>

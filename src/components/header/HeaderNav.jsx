@@ -8,10 +8,10 @@ import NavDropdown from "./NavDropdown";
 
 const HeaderNav = () => {
   const [isNavOpen, setNavOpen] = useState(false);
-  const navAnimation = useSpring({
-    transform: isNavOpen
-      ? `translate3d(0,0,0) scale(1)`
-      : `translate3d(100%, 0 ,0) scale(0.7)`
+  const navAnimation = useTransition(isToggle, null, {
+    from: { opacity: 0, position: "absolute" },
+    enter: { opacity: 1 },
+    leave: { opacity: 0 }
   });
   const menuAnimation1 = useSpring({
     transform: isNavOpen
@@ -42,7 +42,7 @@ const HeaderNav = () => {
           className="bottom-bun"
         ></animated.div>
       </div>
-      <NavDropdown style={navAnimation}></NavDropdown>
+      <NavDropdown style={navAnimation} navOpen={setNavOpen}></NavDropdown>
     </div>
   );
 };

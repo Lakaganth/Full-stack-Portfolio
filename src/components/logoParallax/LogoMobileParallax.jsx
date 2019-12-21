@@ -6,13 +6,13 @@ import "./LogoParallax.scss";
 
 const LogoMobileParallax = () => {
   return (
-    <div className="landing-page-container">
+    <div className="parallax-page-container">
       <div className="parallax-container">
         <Tilt
           className="parallax-effect-glare-scale"
           perspective={500}
-          glareEnable={true}
-          glareMaxOpacity={0.45}
+          glareEnable={false}
+          glareMaxOpacity={0.2}
           scale={1.02}
           gyroscope={true}
         >
@@ -72,7 +72,7 @@ Mohan"
               font-weight="500"
             >
               <tspan x="0" y="0">
-                full stack
+                Full stack
               </tspan>
             </text>
           </g>

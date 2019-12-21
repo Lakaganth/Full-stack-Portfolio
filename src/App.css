@@ -28,3 +28,21 @@
 .App-link {
   color: #09d3ac;
 }
+
+@media screen and (min-width: 1024px) {
+  .App {
+    background-color: #010b11;
+    /* Remeber to remove the height if needed */
+    /* height: 500vh; */
+    background: linear-gradient(
+        25deg,
+        rgba(0, 32, 50, 0.9),
+        rgba(0, 32, 50, 0.9)
+      ),
+      url("./assets/svg/bgpaper.svg");
+    background-size: contain;
+    background-position: top center;
+    /* background-attachment: fixed; */
+    /* background-repeat: no-repeat; */
+  }
+}
